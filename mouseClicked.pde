@@ -1,7 +1,15 @@
-void mouseClicked(){
+void mouseClicked() {
   int row;
-  int collum;
-  collum = int(floor(mouseX/100));
+  int column;
+  column = int(floor(mouseX/100));
   row = int(floor(mouseY/100));
-  board[row][collum]++;
+
+
+  if (turn % 2 == 0 && board[row][column]==0) {
+    board[row][column]=1;
+  } else if (board[row][column]==0) {
+    board[row][column]=2;
+  }
+  turn ++;
+  
 }
