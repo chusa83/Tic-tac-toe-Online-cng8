@@ -10,9 +10,7 @@ boolean winner(int turn) {
       //checking columns
       if (board[0][value]+board[1][value]+board[2][value]== 3 || board[0][value]+board[1][value]+board[2][value]== 6) {
         return true;
-      } else {
-        return false;
-      }
+      } 
     }
     //checking diagonals
     if (board[0][0]+board[1][1]+board[2][2]== 3 || board[0][0]+board[1][1]+board[2][2]== 6) {
