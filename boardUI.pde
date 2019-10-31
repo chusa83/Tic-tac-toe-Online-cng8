@@ -1,3 +1,4 @@
+boolean isplaying = false;
 void boardUI() {
   for (int i = 0; i < 3; i++) { //rows
     for (int j = 0; j < 3; j++) { //columns
@@ -24,4 +25,4 @@ void boardUI() {
       }
     }
   }
-}
+  } 
