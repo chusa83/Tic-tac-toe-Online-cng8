@@ -8,7 +8,6 @@ int board[][]= new int [3][3];
  */
 
 void setup() {
-  sum=0;
   win = false;
   turn = 1;
   size(300, 300);
@@ -25,16 +24,16 @@ void draw() {
   boardUI();
   if (turn > 5){//Checking if winning is a possibility
   if (winner (turn)) {//
-    if(sum == 6){
+    if(turn %2 ==0){
     println ("O won");
     isplaying = false;
     } 
-    if (sum==3){
+    else{
     println ("X won");
     isplaying = false;
     } 
     
-    if (sum!=3|| sum != 6) {
+    if (turn > 8 && winner(turn)== false) {
   println ("tie");
   isplaying = false;
   } 
