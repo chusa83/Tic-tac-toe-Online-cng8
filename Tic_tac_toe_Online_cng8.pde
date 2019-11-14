@@ -1,6 +1,11 @@
+import processing.net.*;
 int turn;
 boolean win;
 int board[][]= new int [3][3];
+Server s;
+Client c;
+String input;
+String serverIP = "127.0.0.0";
 /* Board conventions:
  0 = empty
  1 = x
@@ -16,12 +21,14 @@ void setup() {
       board[i][j]= 0;
     }
   }
-  //board[1][2] = 1;
+  //s = new Server(this, 12345);
+  c = new Client(this, serverIP, 12345);
   isplaying = true;
 }
 
 void draw() {
   boardUI();
+  player2();
   if (turn > 5){//Checking if winning is a possibility
   if (winner (turn)) {//
     if(turn %2 ==0){
