@@ -9,7 +9,7 @@ void mouseClicked() {
     s.write(column+","+row);
   }
   */
-//Server version (uncomment to execute server)  
+//Client version (uncomment to execute client)  
 if (winner(turn)==false){
   if (turn % 2 != 0 && board[row][column]==0) {
     s.write(column+","+row);
